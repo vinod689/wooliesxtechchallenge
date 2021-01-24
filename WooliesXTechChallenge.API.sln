@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WooliesXTechChallenge.API", "WooliesXTechChallenge.API\WooliesXTechChallenge.API.csproj", "{6E5B30C4-1F90-4E9A-AABF-968302C2236F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WooliesXTechChallenge.Tests", "WooliesXTechChallenge.Tests\WooliesXTechChallenge.Tests.csproj", "{C2C4BC2A-5259-4A5F-A469-7C3B7DF62BBB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WooliesXTechChallenge.Application", "WooliesXTechChallenge.Application\WooliesXTechChallenge.Application.csproj", "{F3BEA200-8E8D-4623-9B76-64012EC76365}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WooliesXTechChallenge.ExternalServices", "WooliesXTechChallenge.ExternalServices\WooliesXTechChallenge.ExternalServices.csproj", "{B0E9047B-A7B7-4A0F-92CC-26230ECCC6C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WooliesXTechChallenge.Models", "WooliesXTechChallenge.Models\WooliesXTechChallenge.Models.csproj", "{36895A15-9696-4C43-ADC9-04925A0BE7E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E5B30C4-1F90-4E9A-AABF-968302C2236F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E5B30C4-1F90-4E9A-AABF-968302C2236F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E5B30C4-1F90-4E9A-AABF-968302C2236F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E5B30C4-1F90-4E9A-AABF-968302C2236F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2C4BC2A-5259-4A5F-A469-7C3B7DF62BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C4BC2A-5259-4A5F-A469-7C3B7DF62BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C4BC2A-5259-4A5F-A469-7C3B7DF62BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C4BC2A-5259-4A5F-A469-7C3B7DF62BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3BEA200-8E8D-4623-9B76-64012EC76365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3BEA200-8E8D-4623-9B76-64012EC76365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3BEA200-8E8D-4623-9B76-64012EC76365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3BEA200-8E8D-4623-9B76-64012EC76365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E9047B-A7B7-4A0F-92CC-26230ECCC6C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E9047B-A7B7-4A0F-92CC-26230ECCC6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E9047B-A7B7-4A0F-92CC-26230ECCC6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E9047B-A7B7-4A0F-92CC-26230ECCC6C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36895A15-9696-4C43-ADC9-04925A0BE7E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36895A15-9696-4C43-ADC9-04925A0BE7E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36895A15-9696-4C43-ADC9-04925A0BE7E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36895A15-9696-4C43-ADC9-04925A0BE7E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30923963-EE34-4612-BD53-1D1DB5D514AC}
+	EndGlobalSection
+EndGlobal

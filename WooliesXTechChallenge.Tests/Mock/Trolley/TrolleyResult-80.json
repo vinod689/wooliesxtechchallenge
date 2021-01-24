@@ -1,0 +1,63 @@
+{
+  "products": [
+    {
+      "name": "icecream",
+      "price": 20
+    },
+    {
+      "name": "coffee",
+      "price": 20
+    }
+  ],
+  "specials": [
+    {
+      "quantities": [
+        {
+          "name": "icecream",
+          "quantity": 2
+        },
+        {
+          "name": "coffee",
+          "quantity": 2
+        }
+      ],
+      "total": 20
+    },
+    {
+      "quantities": [
+        {
+          "name": "icecream",
+          "quantity": 4
+        },
+        {
+          "name": "coffee",
+          "quantity": 2
+        }
+      ],
+      "total": 30
+    },
+    {
+      "quantities": [
+        {
+          "name": "icecream",
+          "quantity": 2
+        },
+        {
+          "name": "coffee",
+          "quantity": 3
+        }
+      ],
+      "total": 70
+    }
+  ],
+  "quantities": [
+    {
+      "name": "icecream",
+      "quantity": 5
+    },
+    {
+      "name": "coffee",
+      "quantity": 5
+    }
+  ]
+}

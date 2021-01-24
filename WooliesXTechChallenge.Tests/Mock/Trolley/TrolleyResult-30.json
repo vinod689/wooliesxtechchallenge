@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "name": "icecream",
+      "price": 20
+    }
+  ],
+  "specials": [
+    {
+      "quantities": [
+        {
+          "name": "icecream",
+          "quantity": 2
+        }
+      ],
+      "total": 120
+    },
+    {
+      "quantities": [
+        {
+          "name": "icecream",
+          "quantity": 2
+        }
+      ],
+      "total": 10
+    },
+    {
+      "quantities": [
+        {
+          "name": "icecream",
+          "quantity": 1
+        }
+      ],
+      "total": 10
+    }
+  ],
+  "quantities": [
+    {
+      "name": "icecream",
+      "quantity": 5
+    }
+  ]
+}
+
