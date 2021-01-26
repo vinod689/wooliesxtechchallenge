@@ -8,6 +8,6 @@ namespace WooliesXTechChallenge.Models.Sort
     public class ShopperHistoryModel
     {
         public int CustomerId { get; set; }
-        public List<ProductModel> Products { get; set; }
+        public List<SortProductModel> Products { get; set; }
     }
 }

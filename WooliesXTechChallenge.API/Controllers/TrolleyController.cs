@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using WooliesXTechChallenge.Application.Trolley;
 using WooliesXTechChallenge.Models.Trolley;
 
@@ -27,7 +28,7 @@ namespace WooliesXTechChallenge.API.Controllers
         /// <summary>
         /// gets the lowest possible total based on provided lists of prices, specials and quantities
         /// </summary>
-        /// <param name="TrolleyModel"></param>
+        /// <param name="trolleyModel"></param>
         /// <response code="200">Returns the name and token</response>
         /// <response code="400">For bad request</response>
         /// <response code="500">If there was an internal server error</response>
@@ -35,11 +36,12 @@ namespace WooliesXTechChallenge.API.Controllers
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]
-        public async Task<IActionResult> TrolleyTotal([FromBody] TrolleyModel TrolleyModel)
+        public async Task<IActionResult> TrolleyTotal([FromBody] TrolleyModel trolleyModel)
         {
             Logger?.LogDebug("'{0}' has been invoked", nameof(TrolleyTotal));
+            Logger?.LogError("'Incoming request {0}", JsonConvert.SerializeObject(trolleyModel).ToString());
 
-            var trolleyTotal = await _mediator.Send(new GetTrolleyTotalQuery(TrolleyModel, Environment.GetEnvironmentVariable("AUTHENTICATION_TOKEN")));
+            var trolleyTotal = await _mediator.Send(new GetTrolleyTotalQuery(trolleyModel, Environment.GetEnvironmentVariable("AUTHENTICATION_TOKEN")));
             return Ok(trolleyTotal);
 
         }

@@ -9,13 +9,13 @@ namespace WooliesXTechChallenge.Application.Sort
     /* Interface for Sorter */
     public interface ISorter
     {
-        Task<List<ProductModel>> GetSortedProducts(List<ProductModel> products);
+        Task<List<SortProductModel>> SortProducts(List<SortProductModel> products);
     }
 
     /* Concrete implementation of base Sorter */
     public class LowToHighSorter : ISorter
     {
-        public async Task<List<ProductModel>> GetSortedProducts(List<ProductModel> products)
+        public async Task<List<SortProductModel>> SortProducts(List<SortProductModel> products)
         {
             products.Sort((x, y) =>
             {
@@ -30,7 +30,7 @@ namespace WooliesXTechChallenge.Application.Sort
     /* Concrete implementation of base Sorter */
     public class HighToLowSorter : ISorter
     {
-        public async Task<List<ProductModel>> GetSortedProducts(List<ProductModel> products)
+        public async Task<List<SortProductModel>> SortProducts(List<SortProductModel> products)
         {
             products.Sort((x, y) =>
             {
@@ -45,7 +45,7 @@ namespace WooliesXTechChallenge.Application.Sort
     /* Concrete implementation of base Sorter */
     public class AscendingSorter : ISorter
     {
-        public async Task<List<ProductModel>> GetSortedProducts(List<ProductModel> products)
+        public async Task<List<SortProductModel>> SortProducts(List<SortProductModel> products)
         {
             products.Sort((a, b) => a.Name.CompareTo(b.Name));
             return await Task.FromResult(products);
@@ -55,7 +55,7 @@ namespace WooliesXTechChallenge.Application.Sort
     /* Concrete implementation of base Sorter */
     public class DescendingSorter : ISorter
     {
-        public async Task<List<ProductModel>> GetSortedProducts(List<ProductModel> products)
+        public async Task<List<SortProductModel>> SortProducts(List<SortProductModel> products)
         {
             products.Sort((a, b) => b.Name.CompareTo(a.Name));
             return await Task.FromResult(products);
@@ -71,7 +71,7 @@ namespace WooliesXTechChallenge.Application.Sort
         {
             _shopperHistoryService = shopperHistoryService;
         }
-        public async Task<List<ProductModel>> GetSortedProducts(List<ProductModel> products)
+        public async Task<List<SortProductModel>> SortProducts(List<SortProductModel> products)
         {
             var shopperHistoryList = new List<ShopperHistoryModel>();
             try
@@ -79,16 +79,15 @@ namespace WooliesXTechChallenge.Application.Sort
                 shopperHistoryList = await _shopperHistoryService.GetShopperHistoryAsync(Environment.GetEnvironmentVariable("AUTHENTICATION_TOKEN"));
 
             }
-            catch
+            catch(Exception Ex)
             {
-                var ex = new Exception(message: "unable to retreive shopper history");
-                ex.Data.Add("shopper history", shopperHistoryList);
-                throw ex;
+                Ex.Data.Add("shopper history", shopperHistoryList);
+                throw;
             }
 
 
             //Get all the products across all users
-            var productsByUsers = new List<ProductModel>();
+            var productsByUsers = new List<SortProductModel>();
             shopperHistoryList.ForEach(shopperHistory =>
                 {
                     if (shopperHistory.Products.Count > 0)

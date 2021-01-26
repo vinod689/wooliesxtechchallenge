@@ -14,6 +14,11 @@ namespace WooliesXTechChallenge.Application.Sort
     public class SorterFactory: ISorterFactory
     {
         private readonly IServiceProvider _serviceProvider;
+
+        public SorterFactory()
+        {
+        }
+
         public SorterFactory(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;

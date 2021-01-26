@@ -7,7 +7,7 @@ namespace WooliesXTechChallenge.Models.Trolley
 {
     public class TrolleyModel
     {
-        public List<ProductModel> Products { get; set; }
+        public List<TrolleyProductModel> Products { get; set; }
         public List<SpecialModel> Specials { get; set; }
         public List<ProductQuantityModel> Quantities { get; set; }
     }

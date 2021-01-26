@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -19,13 +19,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Mock\Trolley\missing-Info.json">
+    <None Update="Mock\Trolley\TrolleyRequest-Sample4.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Mock\Trolley\TrolleyResult-80.json">
+    <None Update="Mock\Trolley\TrolleyRequest-Sample3.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Mock\Trolley\TrolleyResult-30.json">
+    <None Update="Mock\Trolley\TrolleyRequest-Sample2.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Mock\Trolley\TrolleyRequest-Sample1.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

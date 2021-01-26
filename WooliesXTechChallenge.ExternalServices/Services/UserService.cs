@@ -1,6 +1,7 @@
 ﻿using System;
 using WooliesXTechChallenge.Models;
 using WooliesXTechChallenge.ExternalServices.Interfaces;
+using System.Threading.Tasks;
 
 namespace WooliesXTechChallenge.ExternalServices.Services
 {
@@ -14,7 +15,7 @@ namespace WooliesXTechChallenge.ExternalServices.Services
         /// </summary>
         /// <param name="userName"></param>
         /// <returns></returns>
-        public TokenDetailsModel GenerateUserToken(string userName)
+        public async Task<TokenDetailsModel> GenerateUserToken(string userName)
         {
             var tokenDetails = new TokenDetailsModel();
 
@@ -27,7 +28,7 @@ namespace WooliesXTechChallenge.ExternalServices.Services
             {
                 return null;
             }
-            return tokenDetails;
+            return await Task.FromResult(tokenDetails);
         }
     }
 }

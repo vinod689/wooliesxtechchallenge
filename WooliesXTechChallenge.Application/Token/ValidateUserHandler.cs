@@ -21,13 +21,9 @@ namespace WooliesXTechChallenge.Application.Token
         {
             string user = "Vinod Patwari";
 
-            return await Task.Run(() =>
-            {
-                //Generate user token
-                var token = _userService.GenerateUserToken(user);
-                return token;
-            });
-
+            //Generate user token
+            var token = await _userService.GenerateUserToken(user);
+            return token;
         }
     }
 }

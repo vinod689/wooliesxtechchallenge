@@ -16,7 +16,7 @@ namespace WooliesXTechChallenge.ExternalServices.Services
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task<List<ProductModel>> GetProductsAsync(string token)
+        public async Task<List<SortProductModel>> GetProductsAsync(string token)
         {
             // Get an HttpClient configured to the specification defined in StartUp.
             var client = _httpClientFactory.CreateClient("WooliesX");
@@ -27,7 +27,7 @@ namespace WooliesXTechChallenge.ExternalServices.Services
 
             var response = await client.GetStringAsync(QueryHelpers.AddQueryString(client.BaseAddress.ToString() + "/products", query));
 
-            List<ProductModel> productList = JsonConvert.DeserializeObject<List<ProductModel>>(response);
+            List<SortProductModel> productList = JsonConvert.DeserializeObject<List<SortProductModel>>(response);
 
             return productList;
         }

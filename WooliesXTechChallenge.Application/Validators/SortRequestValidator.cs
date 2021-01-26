@@ -1,27 +1,22 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using FluentValidation;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WooliesXTechChallenge.Application.Validators
 {
-    public static class SortRequestValidator
+    /// <summary>
+    /// Sort Request Validator validates Sort Option
+    /// </summary>
+    public class SortRequestValidator : AbstractValidator<string>
     {
-        public static void validateAndThrow(string sortOption)
+        public SortRequestValidator()
         {
-            if(sortOption == null)
-            {
-                var ex = new Exception(message: "sortOption is null");
-                ex.Data.Add("sortOption", sortOption);
-                throw ex;
-            } else if (Array.IndexOf(Constants.SORT_METHODS, sortOption.ToLower()) < 0)
-            {
-                var ex = new Exception(message: "Invalid sort option supplied");
-                ex.Data.Add("sortOption", sortOption);
-                throw ex;
-            }
+            // validate request
+            RuleFor(r => r).NotNull()
+                .WithMessage("Invalid request");
+
+            // validate option
+            RuleFor(r => Array.IndexOf(Constants.SORT_METHODS, r.ToLower())).GreaterThanOrEqualTo(0)
+                .WithMessage("Invalid sort option");
         }
     }
 }

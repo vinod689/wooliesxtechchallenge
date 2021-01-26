@@ -1,0 +1,102 @@
+{
+  "Products": [
+    {
+      "Name": "icecream",
+      "Price": 10
+    },
+    {
+      "Name": "coffee",
+      "Price": 13
+    }
+  ],
+  "Quantities": [
+    {
+      "Name": "icecream",
+      "Quantity": 5
+    },
+    {
+      "Name": "coffee",
+      "Quantity": 4
+    }
+  ],
+  "Specials": [
+    {
+      "Quantities": [
+        {
+          "Name": "icecream",
+          "Quantity": 2
+        },
+        {
+          "Name": "coffee",
+          "Quantity": 1
+        }
+      ],
+      "Total": 35
+    },
+    {
+      "Quantities": [
+        {
+          "Name": "icecream",
+          "Quantity": 3
+        },
+        {
+          "Name": "coffee",
+          "Quantity": 4
+        }
+      ],
+      "Total": 52
+    },
+    {
+      "Quantities": [
+        {
+          "Name": "icecream",
+          "Quantity": 5
+        },
+        {
+          "Name": "coffee",
+          "Quantity": 2
+        }
+      ],
+      "Total": 75
+    },
+    {
+      "Quantities": [
+        {
+          "Name": "icecream",
+          "Quantity": 3
+        },
+        {
+          "Name": "coffee",
+          "Quantity": 0
+        }
+      ],
+      "Total": 60
+    },
+    {
+      "Quantities": [
+        {
+          "Name": "icecream",
+          "Quantity": 0
+        },
+        {
+          "Name": "coffee",
+          "Quantity": 2
+        }
+      ],
+      "Total": 10
+    },
+    {
+      "Quantities": [
+        {
+          "Name": "icecream",
+          "Quantity": 4
+        },
+        {
+          "Name": "coffee",
+          "Quantity": 0
+        }
+      ],
+      "Total": 50
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "Products": [
+    {
+      "Name": "Product 0",
+      "Price": 12.1148035917966
+    },
+    {
+      "Name": "Product 1",
+      "Price": 1.90730247269725
+    },
+    {
+      "Name": "Product 2",
+      "Price": 0.0258311047339025
+    }
+  ],
+  "Specials": [
+    {
+      "Quantities": [
+        {
+          "Name": "Product 0",
+          "Quantity": 4
+        },
+        {
+          "Name": "Product 1",
+          "Quantity": 7
+        },
+        {
+          "Name": "Product 2",
+          "Quantity": 9
+        }
+      ],
+      "Total": 4.76873837607575
+    },
+    {
+      "Quantities": [
+        {
+          "Name": "Product 0",
+          "Quantity": 4
+        },
+        {
+          "Name": "Product 1",
+          "Quantity": 7
+        },
+        {
+          "Name": "Product 2",
+          "Quantity": 1
+        }
+      ],
+      "Total": 2.03906123732842
+    },
+    {
+      "Quantities": [
+        {
+          "Name": "Product 0",
+          "Quantity": 3
+        },
+        {
+          "Name": "Product 1",
+          "Quantity": 5
+        },
+        {
+          "Name": "Product 2",
+          "Quantity": 2
+        }
+      ],
+      "Total": 0.0797845371378706
+    },
+    {
+      "Quantities": [
+        {
+          "Name": "Product 0",
+          "Quantity": 9
+        },
+        {
+          "Name": "Product 1",
+          "Quantity": 5
+        },
+        {
+          "Name": "Product 2",
+          "Quantity": 8
+        }
+      ],
+      "Total": 5.22211302746806
+    },
+    {
+      "Quantities": [
+        {
+          "Name": "Product 0",
+          "Quantity": 6
+        },
+        {
+          "Name": "Product 1",
+          "Quantity": 2
+        },
+        {
+          "Name": "Product 2",
+          "Quantity": 2
+        }
+      ],
+      "Total": 1.57852919412084
+    },
+    {
+      "Quantities": [
+        {
+          "Name": "Product 0",
+          "Quantity": 2
+        },
+        {
+          "Name": "Product 1",
+          "Quantity": 4
+        },
+        {
+          "Name": "Product 2",
+          "Quantity": 5
+        }
+      ],
+      "Total": 0.522889312708588
+    }
+  ],
+  "Quantities": [
+    {
+      "Name": "Product 0",
+      "Quantity": 2
+    },
+    {
+      "Name": "Product 1",
+      "Quantity": 7
+    },
+    {
+      "Name": "Product 2",
+      "Quantity": 7
+    }
+  ]
+}

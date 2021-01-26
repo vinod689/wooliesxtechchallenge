@@ -4,7 +4,7 @@ using WooliesXTechChallenge.Models.Sort;
 
 namespace WooliesXTechChallenge.Application.Sort
 {
-    public class GetProductsQuery : IRequest<List<ProductModel>>
+    public class GetProductsQuery : IRequest<List<SortProductModel>>
     {
         public GetProductsQuery(string sortOption,string token)
         {

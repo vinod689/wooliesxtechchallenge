@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Polly;
+using Serilog;
 using System;
 using System.Reflection;
 using WooliesXTechChallenge.API.Controllers;
@@ -20,13 +21,6 @@ namespace WooliesXTechChallenge.API
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -40,7 +34,9 @@ namespace WooliesXTechChallenge.API
             services.AddScoped<ITrolleyService, TrolleyService>();
 
             // Set up dependency injection for controller's logger
-            services.AddScoped<ILogger, Logger<TokenController>>();
+            services.AddScoped<Microsoft.Extensions.Logging.ILogger, Logger<TokenController>>();
+            services.AddScoped<Microsoft.Extensions.Logging.ILogger, Logger<TrolleyController>>();
+            services.AddScoped<Microsoft.Extensions.Logging.ILogger, Logger<SortController>>();
 
             services.AddSingleton<IShopperHistoryService, ShopperHistoryService>();
 
@@ -88,7 +84,20 @@ namespace WooliesXTechChallenge.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                // Enable middleware to serve generated Swagger as a JSON endpoint.
+                app.UseSwagger();
+
+                // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+                // specifying the Swagger JSON endpoint.
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                });
             }
+
+            app.UseSerilogRequestLogging();
+
 
             app.UseMiddleware<ExceptionHandler>();
 
@@ -102,18 +111,6 @@ namespace WooliesXTechChallenge.API
             {
                 endpoints.MapControllers();
             });
-
-            // Enable middleware to serve generated Swagger as a JSON endpoint.
-    app.UseSwagger();
-
-    // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-    // specifying the Swagger JSON endpoint.
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-    });
-
-
         }
     }
 }

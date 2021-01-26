@@ -23,7 +23,7 @@
             <summary>
             gets the lowest possible total based on provided lists of prices, specials and quantities
             </summary>
-            <param name="TrolleyModel"></param>
+            <param name="trolleyModel"></param>
             <response code="200">Returns the name and token</response>
             <response code="400">For bad request</response>
             <response code="500">If there was an internal server error</response>

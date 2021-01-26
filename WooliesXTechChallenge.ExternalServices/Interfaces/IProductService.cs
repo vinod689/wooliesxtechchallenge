@@ -6,6 +6,6 @@ namespace WooliesXTechChallenge.ExternalServices.Interfaces
 {
     public interface IProductService
     {
-        Task<List<ProductModel>> GetProductsAsync(string token);
+        Task<List<SortProductModel>> GetProductsAsync(string token);
     }
 }
