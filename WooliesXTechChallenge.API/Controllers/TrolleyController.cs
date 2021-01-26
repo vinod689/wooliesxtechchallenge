@@ -39,7 +39,6 @@ namespace WooliesXTechChallenge.API.Controllers
         public async Task<IActionResult> TrolleyTotal([FromBody] TrolleyModel trolleyModel)
         {
             Logger?.LogDebug("'{0}' has been invoked", nameof(TrolleyTotal));
-            Logger?.LogError("'Incoming request {0}", JsonConvert.SerializeObject(trolleyModel).ToString());
 
             var trolleyTotal = await _mediator.Send(new GetTrolleyTotalQuery(trolleyModel, Environment.GetEnvironmentVariable("AUTHENTICATION_TOKEN")));
             return Ok(trolleyTotal);
